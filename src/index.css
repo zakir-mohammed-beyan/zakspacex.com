@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  font-family: Poppins, "sans-serif";
+}
+
+body {
+  @apply m-0 p-0 box-border bg-[#ffffff] ;
+}
+ 
+.showRightBlack::before {
+  @apply absolute top-0 right-0 w-full h-full bg-[#081b29] animate-showRightBlack;
+  content: "";
+}
+.showRightBlack {
+  @apply relative overflow-hidden;
+}
+
+
+.showRightWhite::after {
+  @apply absolute top-0 right-0 w-full h-full bg-white animate-showRightWhite;
+  content: "";
+}
+.showRightWhite {
+  @apply relative overflow-hidden;
+}
+
+
