@@ -5,28 +5,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  font-family: Poppins, "sans-serif";
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  @apply m-0 p-0 box-border bg-[#ffffff] ;
+  @apply m-0 p-0 box-border bg-[#ffffff];
 }
- 
+
 .showRightBlack::before {
   @apply absolute top-0 right-0 w-full h-full bg-[#081b29] animate-showRightBlack;
   content: "";
+  z-index: 10; /* Adjust this value as needed */
 }
 .showRightBlack {
   @apply relative overflow-hidden;
 }
 
-
 .showRightWhite::after {
   @apply absolute top-0 right-0 w-full h-full bg-white animate-showRightWhite;
   content: "";
+  z-index: 10; /* Adjust this value as needed */
 }
+
 .showRightWhite {
   @apply relative overflow-hidden;
 }
-
-

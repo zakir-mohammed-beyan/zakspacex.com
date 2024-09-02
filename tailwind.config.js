@@ -6,15 +6,12 @@ const config = {
   theme: {
     extend: {
       colors: {
-        //blue: "#0d6efd",
         indigo: "#6610f2",
         purple: "#6f42c1",
-        //pink: "#d63384",
         orange: "#fd7e14",
         green: "#198754",
         background: "#081b29",
         yellowgreen: "#9ACD32",
-        linkHover: "#some-color",
       },
       animation: {
         showRightBlack: "showRightBlack 4s ease forwards",
@@ -26,7 +23,6 @@ const config = {
           "0%": { width: "100%" },
           "100%": { width: "0" },
         },
-
         showRightBlue: {
           "0%": { width: "100%" },
           "100%": { width: "0" },
@@ -43,4 +39,3 @@ const config = {
 
 // Export the configuration using ES module syntax
 export default config;
-

@@ -39,15 +39,26 @@ const Home = () => {
   return (
     <section className="bg-transparent h-[100vh] w-full flex flex-col">
       <Header />
+      <span className="absolute top-0 right-0 h-full w-fit -z-50">
+        <img
+          className="w-full h-full object-cover bg-center showRightWhite"
+          src="/public/assets/futuristic-high-tech-virtual.png"
+          alt=""
+        />
+      </span>
       <div className="pt-[20vh] flex px-6 md:px-28 xl:px-[10%]">
         <div className="flex flex-col w-full h-full md:w-[68%]">
-          <h1 className="showRightWhite flex font-extrabold uppercase text-3xl  sm:text-6xl">
-            Code the Future, <br /> Build the World.
-          </h1>
+        <span className=" flex flex-col uppercase showRightWhite font-extrabold text-3xl sm:text-6xl">
+          <h1> <span className=" text-indigo mr-3">code</span>the future,</h1>
+          <h1>build the <span className=" text-pink-600">world.</span></h1>
+        </span>
 
           <h1 className="mt-10 flex items-center sm:text-xl showRightWhite">
             Welcome to
-            <span className=" text-xl sm:text-2xl font-bold ml-1"> Zakspacex</span>
+            <span className=" text-xl sm:text-2xl font-bold ml-1">
+             
+              Zakspacex
+            </span>
             <BsFillPatchCheckFill className=" ml-3 text-blue-600" />
           </h1>
 

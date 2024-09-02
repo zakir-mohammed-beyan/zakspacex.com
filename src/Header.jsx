@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header
-      className=" bg-white shadow-sm fixed w-full h-[10vh] top-0 left-0 flex items-center 
+      className=" bg-white fixed w-full h-[10vh] top-0 left-0 flex items-center 
     justify-between px-6 lg:px-28 xl:px-[10%] py-8 z-50"
     >
       <span className=" showRightWhite">
