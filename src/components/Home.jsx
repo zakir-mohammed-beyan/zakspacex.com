@@ -41,13 +41,13 @@ const Home = () => {
       <Header />
       <div className="pt-[20vh] flex px-6 md:px-28 xl:px-[10%]">
         <div className="flex flex-col w-full h-full md:w-[68%]">
-          <h1 className="showRightWhite flex font-extrabold uppercase text-6xl">
+          <h1 className="showRightWhite flex font-extrabold uppercase text-3xl  sm:text-6xl">
             Code the Future, <br /> Build the World.
           </h1>
 
-          <h1 className="mt-10 flex items-center text-xl showRightWhite">
+          <h1 className="mt-10 flex items-center sm:text-xl showRightWhite">
             Welcome to
-            <span className="text-2xl font-bold ml-1"> Zakspacex</span>
+            <span className=" text-xl sm:text-2xl font-bold ml-1"> Zakspacex</span>
             <BsFillPatchCheckFill className=" ml-3 text-blue-600" />
           </h1>
 

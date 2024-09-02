@@ -41,9 +41,12 @@ const Header = () => {
         <ul className="hidden gap-8 md:flex md:flex-row md:items-center showRightWhite ">
           {renderMenuItems()}
         </ul>
-        <button className="showRightWhite overflow-hidden px-5 py-3 font-medium bg-blue-500 border-blue-600 text-white outline-none rounded-full">
-          TRY IT NOW
+        <span className=" showRightWhite">
+        <button className=" overflow-hidden px-3 py-2 sm:px-5 sm:py-3 bg-blue-500 text-white border-none outline-none rounded-full">
+          Try it now
         </button>
+        </span>
+       
       </div>
 
       {/* Mobile Menu Icon */}
@@ -62,16 +65,19 @@ const Header = () => {
              isMenuOpen ? "translate-x-0" : "-translate-x-full"
            } md:hidden`}
       >
-        <ul className="flex flex-col items-center gap-8 text-xl font-semibold">
+        <ul className="flex flex-col items-center gap-8 text-lg ">
           {renderMenuItems()}
         </ul>
-
-        <button className="mt-5 px-5 py-3 font-medium text-xl bg-white border-white text-yellowgreen outline-none rounded-full">
+        <span className="mt-4">
+        <button className=" overflow-hidden px-5 py-3 font-medium bg-white text-yellowgreen outline-none border-none rounded-full">
           GET IN TOUCH
         </button>
+        </span>
+        
       </div>
     </header>
   );
 };
 
 export default Header;
+
