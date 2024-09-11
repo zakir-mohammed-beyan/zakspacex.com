@@ -6,7 +6,7 @@ const config = {
   theme: {
     extend: {
       colors: {
-        indigo: "#6610f2",
+        //indigo: "#6610f2",
         purple: "#6f42c1",
         orange: "#fd7e14",
         green: "#198754",

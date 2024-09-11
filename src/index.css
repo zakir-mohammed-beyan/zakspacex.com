@@ -30,3 +30,30 @@ body {
 .showRightWhite {
   @apply relative overflow-hidden;
 }
+
+.button-icon .cube {
+  transform-style: preserve-3d;
+}
+
+.group-hover .cube {
+  transform: rotateX(90deg);
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.front {
+  transform: translateZ(1em);
+}
+
+.top {
+  transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}

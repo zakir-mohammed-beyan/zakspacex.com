@@ -38,7 +38,7 @@ SocialMediaButton.propTypes = {
 
 const Home = () => {
   return (
-    <section id="home" className="h-[100vh] w-full flex flex-col">
+    <section id="home" className="h-full w-full flex flex-col">
       <Header />
       <span className="absolute top-0 right-0 h-full w-fit -z-50 hidden md:block">
         <img
@@ -47,7 +47,7 @@ const Home = () => {
           alt=""
         />
       </span>
-      <div className=" pt-[15vh] md:pt-[20vh] flex px-6 md:px-28 xl:px-[10%] h-full w-full">
+      <div className="pb-[13.3vh] pt-[15vh] md:pt-[20vh] flex px-6 md:px-28 xl:px-[10%] h-full w-full">
         <div className="flex flex-col w-full h-full md:w-[68%]">
           <span className=" flex flex-col uppercase showRightWhite font-extrabold">
             <h1 className=" first-letter:text-5xl md:first-letter:text-8xl text-3xl md:text-5xl">
@@ -75,16 +75,16 @@ const Home = () => {
             innovation meets impact, creating a future where privacy,
             technology, and promotion unlock new possibilities.
           </p>
-          <div className="flex flex-col md:flex-row gap-10 md:gap-[15%] md:items-start items-center md:mt-10 mt-5">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-[15%] md:items-start items-center md:mt-12 mt-6">
             <span className="flex flex-col gap-10">
-              <button className="group relative bg-transparent overflow-hidden shadow-md px-5 py-4 space-x-2 whitespace-nowrap">
-                <span className="absolute inset-0 w-0 h-full transition-all duration-300 ease-in-out bg-lime-400 group-hover:w-full"></span>
+              <button className="group relative bg-transparent overflow-hidden shadow-md px-5 py-4 space-x-2 whitespace-nowrap border-r border-b border-gray-400 ">
+                <span className="absolute inset-0 w-0 h-full transition-all duration-300 ease-in-out bg-gray-100 group-hover:w-full"></span>
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   Get in touch with us.
                   <BsFillSendCheckFill className=" text-xl" />
                 </span>
               </button>
-              <div className="flex gap-5 showRightWhite">
+              <div className="flex gap-5 mt-2">
                 <SocialMediaButton Icon={FaFacebook} />
                 <SocialMediaButton
                   Icon={FaInstagram}
@@ -97,8 +97,9 @@ const Home = () => {
               </div>
             </span>
 
-            <button className="group relative shadow-md px-5 py-4 space-x-2 whitespace-nowrap">
-              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-in-out bg-lime-400 group-hover:w-0"></span>
+            <button className="group relative shadow-md px-5 py-4 space-x-2 whitespace-nowrap ">
+              {/* <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-in-out bg-gray-100 group-hover:w-0"></span>*/}
+
               <span className="relative z-10 flex items-center justify-center gap-2 ">
                 Explore more.
                 <HiExternalLink className=" text-lg" />
