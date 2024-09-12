@@ -2,6 +2,8 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link as ScrollLink } from "react-scroll";
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 const Header = () => {
   const menuItems = [
@@ -21,7 +23,7 @@ const Header = () => {
     menuItems.map((item) => (
       <li key={item.name} className="relative group">
         <ScrollLink
-          className="text-lg transition-colors duration-300 hover:text-gray-400 cursor-pointer"
+          className="text-[17px] transition-colors duration-300 hover:text-gray-400 cursor-pointer"
           to={item.to}
           spy={true}
           smooth={true}
@@ -35,16 +37,28 @@ const Header = () => {
       </li>
     ));
 
+  // Define PropTypes for the component
+
   return (
     <header className="bg-white fixed w-full top-0 left-0 z-50 shadow-sm">
       <nav className="h-[10vh] flex items-center justify-between px-6 lg:px-28 xl:px-[10%]">
-        <div className="showRightWhite">
+        <h1 className="flex items-center justify-center text-lg font-extrabold showRightWhite gap-3">
+          ZakTechies
+          <div className="flex gap-3 text-lg">
+            <FaFacebook className=" cursor-pointer" />
+            <AiFillInstagram className=" cursor-pointer" />
+            <FaLinkedinIn className=" cursor-pointer" />
+          </div>
+        </h1>
+        {/*
+          <div className="showRightWhite">
           <img
             className="w-32"
-            src="/assets/Zakspacex.png"
-            alt="Zakspacex Logo"
+            src="/public/assets/ZakTechies.png"
+            alt="ZakTechies Logo"
           />
         </div>
+        */}
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 items-center showRightWhite">
