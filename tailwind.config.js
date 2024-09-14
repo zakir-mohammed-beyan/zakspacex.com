@@ -14,9 +14,9 @@ const config = {
         yellowgreen: "#9ACD32",
       },
       animation: {
-        showRightBlack: "showRightBlack 4s ease forwards",
-        showRightBlue: "showRightBlue 4s ease forwards",
-        showRightWhite: "showRightWhite 4s ease forwards",
+        showRightGray: "showRightBlack 8s ease forwards",
+        showRightBlue: "showRightBlue 8s ease forwards",
+        showRightWhite: "showRightWhite 8s ease forwards",
       },
       keyframes: {
         showRightBlack: {

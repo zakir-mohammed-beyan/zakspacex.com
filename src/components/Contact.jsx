@@ -9,13 +9,15 @@ const Contact = () => {
     textColor = "text-blue-600",
     hoverColor = "bg-blue-600",
     borderColor = "border-blue-600",
+    ariaLabel,
   }) => {
     return (
       <span
         className={`flex relative group items-center 
-        justify-center bg-transparent overflow-hidden
-      border rounded-full shadow ${borderColor}
-       w-11 h-11 cursor-pointer hover:text-white ${textColor}`}
+          justify-center bg-transparent overflow-hidden
+        border rounded-full shadow ${borderColor}
+         w-11 h-11 cursor-pointer hover:text-white ${textColor}`}
+        aria-label={ariaLabel} // Accessibility improvement
       >
         <Icon className="relative z-10 text-xl" />
         <span
@@ -31,20 +33,29 @@ const Contact = () => {
     textColor: PropTypes.string,
     hoverColor: PropTypes.string,
     borderColor: PropTypes.string,
+    ariaLabel: PropTypes.string.isRequired, // Add ariaLabel as required
+  };
+
+  // Define default props
+  SocialMediaButton.defaultProps = {
+    textColor: "text-blue-600",
+    hoverColor: "bg-blue-600",
+    borderColor: "border-blue-600",
   };
 
   return (
     <div>
       <div className="flex gap-5 mt-6 showRightWhite">
-        <SocialMediaButton Icon={FaFacebook} />
+        <SocialMediaButton Icon={FaFacebook} ariaLabel="Facebook" />
         <SocialMediaButton
           Icon={FaInstagram}
           hoverColor="bg-pink-600"
           borderColor="border-pink-600"
           textColor="text-pink-600"
+          ariaLabel="Instagram"
         />
-        <SocialMediaButton Icon={FaLinkedinIn} />
-        <SocialMediaButton Icon={FaXTwitter} />
+        <SocialMediaButton Icon={FaLinkedinIn} ariaLabel="LinkedIn" />
+        <SocialMediaButton Icon={FaXTwitter} ariaLabel="X (formerly Twitter)" />
       </div>
     </div>
   );

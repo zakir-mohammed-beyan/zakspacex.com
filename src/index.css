@@ -8,16 +8,24 @@
   font-family: "Poppins", sans-serif;
 }
 
+@font-face {
+  font-family: 'D-DIN-Bold';
+  src: url('/path-to-your-fonts/D-DIN-Bold.woff2') format('woff2'),
+       url('/path-to-your-fonts/D-DIN-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   @apply m-0 p-0 box-border bg-[#ffffff];
 }
 
-.showRightBlack::before {
-  @apply absolute top-0 right-0 w-full h-full bg-[#081b29] animate-showRightBlack;
+.showRightGray::before {
+  @apply absolute top-0 right-0 w-full h-full bg-gray-50 animate-showRightGray;
   content: "";
   z-index: 10; /* Adjust this value as needed */
 }
-.showRightBlack {
+.showRightGray {
   @apply relative overflow-hidden;
 }
 
@@ -31,3 +39,7 @@ body {
   @apply relative overflow-hidden;
 }
 
+/* Applying D-DIN-Bold font */
+.D-DIN-Bold {
+  font-family: 'D-DIN-Bold', Arial, Verdana, sans-serif;
+}
