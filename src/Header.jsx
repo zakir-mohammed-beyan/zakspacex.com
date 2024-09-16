@@ -6,47 +6,31 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [navbarBg, setNavbarBg] = useState("bg-tranparent");
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const [navbarBg, setNavbarBg] = useState("bg-transparent");
   const changeNavbarBgOnScroll = () => {
     const scrollY = window.scrollY;
     const isMobile = window.innerWidth < 768;
 
     if (isMobile) {
-      if (scrollY > 100) {
-        setNavbarBg("bg-[#EDDEDE]");
-      } else {
-        setNavbarBg("bg-[#E5E7EB]");
-      }
+      setNavbarBg(scrollY > 100 ? "bg-lime-400 shadow-md" : "bg-amber-400");
     } else {
-      if (scrollY > 100) {
-        setNavbarBg("bg-[#EDDEDE] shadow-md");
-      } else {
-        setNavbarBg("bg-transparent");
-      }
+      setNavbarBg(scrollY > 100 ? "bg-lime-400 shadow-md" : "bg-transparent");
     }
   };
 
   useEffect(() => {
-    // Set the initial background color based on the device type
-    if (window.innerWidth < 768) {
-      setNavbarBg("bg-[#E5E7EB]");
-    } else {
-      setNavbarBg("bg-transparent");
-    }
-
     window.addEventListener("scroll", changeNavbarBgOnScroll);
-
-    // Cleanup the event listener on component unmount
     return () => window.removeEventListener("scroll", changeNavbarBgOnScroll);
   }, []);
 
   const menuItems = [
-    { name: "Techies", to: "home" },
+    { name: "Updates", to: "updates" },
     { name: "Mission", to: "mission" },
     { name: "Vision", to: "vision" },
-    { name: "Updates", to: "updates" },
+    { name: "Explore", to: "explore" },
     { name: "Software", to: "software" },
     { name: "Contact", to: "contact" },
   ];
@@ -57,7 +41,7 @@ const Header = () => {
     >
       <nav className="h-[10vh] flex items-center justify-between px-[10%]">
         <ScrollLink
-          to="home"
+          to="updates"
           smooth={true}
           duration={500}
           className="cursor-pointer"
@@ -65,7 +49,8 @@ const Header = () => {
           <h1 className="text-lg font-extrabold cursor-pointer">ZakTechies</h1>
         </ScrollLink>
 
-        <ul className="hidden md:flex gap-8">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-8 relative">
           {menuItems.map((item) => (
             <MenuItem key={item.name} name={item.name} to={item.to} />
           ))}
@@ -81,20 +66,16 @@ const Header = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed z-40 top-[10vh] left-0 w-full h-full
-            bg-gray-100 transform transition-transform duration-300 ${
-              isMenuOpen ? "translate-x-0" : "-translate-x-full"
-            } md:hidden`}
+          className={`fixed -z-50 top-[10vh] left-0 w-full h-fit px-[10%] py-[10vh] text-start bg-lime-400 transform transition-transform duration-300 ${
+            isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          } md:hidden`}
         >
-          <div className="flex flex-col items-center justify-center h-full">
-            <ul className="flex flex-col items-center gap-8 ">
+          <div className="flex flex-col items-start justify-start">
+            <ul className="flex flex-col items-start gap-5">
               {menuItems.map((item) => (
                 <MenuItem key={item.name} name={item.name} to={item.to} />
               ))}
             </ul>
-            <button className="group px-5 py-2 rounded-full bg-lime-400 mt-3 uppercase font-medium">
-              Try4free
-            </button>
           </div>
         </div>
       </nav>
@@ -105,9 +86,7 @@ const Header = () => {
 const MenuItem = ({ name, to }) => (
   <li className="relative group">
     <ScrollLink
-      className="uppercase font-medium transition-colors
-       duration-300 hover:text-gray-400 text-gray-800
-        cursor-pointer md:text-[14px] xl:text-base tracking-wide"
+      className="uppercase font-medium transition-colors duration-300 hover:text-gray-400 text-gray-800 cursor-pointer md:text-[14px] xl:text-base tracking-wide"
       to={to}
       spy={true}
       smooth={true}
@@ -117,7 +96,7 @@ const MenuItem = ({ name, to }) => (
     >
       {name}
     </ScrollLink>
-    <span className="absolute bg-indigo-500 h-0.5 w-0 left-1/2 bottom-0 transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute bg-indigo-500 h-0.5 w-0 left-1/2 bottom-[-5px] transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
   </li>
 );
 

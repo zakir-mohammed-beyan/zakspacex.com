@@ -1,7 +1,7 @@
 import Home from "./components/Home";
 import Mission from "./components/Mission";
 import Vision from "./components/Vision";
-import Updates from "./components/Updates";
+import Explore from "./components/Explore";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <Home />
       <Mission />
       <Vision />
-      <Updates />
+      <Explore />
     </section>
   );
 };

@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-:root {
-  font-family: "Poppins", sans-serif;
-}
-
-@font-face {
-  font-family: 'D-DIN-Bold';
-  src: url('/path-to-your-fonts/D-DIN-Bold.woff2') format('woff2'),
-       url('/path-to-your-fonts/D-DIN-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
 
 body {
   @apply m-0 p-0 border-none outline-none box-border;
@@ -39,7 +26,89 @@ body {
   @apply relative overflow-hidden;
 }
 
-.D-DIN-Bold {
+
+@font-face {
+  font-family: 'D-DIN-Bold';
+  src: url('/path-to-your-fonts/D-DIN-Bold.woff2') format('woff2'),
+       url('/path-to-your-fonts/D-DIN-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+  .D-DIN-Bold {
   font-family: 'D-DIN-Bold', Arial, Verdana, sans-serif;
 }
 
+/*VISION*/
+.custom-transform1 {
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(-1); /* Default flip */
+}
+
+.custom-transform1:hover {
+  transform: scaleX(-1) scale(1.1); /* Flip and scale on hover */
+}
+
+/*SERVICES*/
+
+.custom-transform2 {
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(-1); /* Default flip */
+}
+
+.custom-transform2:hover {
+  transform: scaleX(-1) scale(1.1); /* Flip and scale on hover */
+}
+
+/***************************************/
+/* DropdownMenu.css */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 0.5rem;
+  width: 16rem; /* Adjust width as needed */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-header {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5f9;
+}
+
+.dropdown-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item a:hover {
+  color: #1d4ed8; /* Change color on hover */
+}

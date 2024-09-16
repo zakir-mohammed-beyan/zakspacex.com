@@ -39,3 +39,4 @@ const config = {
 
 // Export the configuration using ES module syntax
 export default config;
+

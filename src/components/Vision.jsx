@@ -2,43 +2,47 @@ const Vision = () => {
   return (
     <section
       id="vision"
-      className="flex flex-col bg-slate-300 
-      h-fit w-full py-[10vh] px-[10%]"
+      className="flex flex-col md:flex-row bg-sky-950
+      h-fit w-full py-[10vh] px-[10%] md:gap-x-20 text-white"
     >
-      <div className="flex flex-col items-center">
-        <h1 className="uppercase text-center text-4xl font-extrabold tracking-wide text-gray-800">
+      <h1
+        className="md:hidden mb-10 md:mb-0 uppercase text-center
+      text-4xl font-extrabold tracking-wide "
+      >
+        Our Vision
+      </h1>
+      <div className="md:hidden w-full md:w-[35%] md:mb-0">
+        <img
+          src="/public/assets/Vission-image.png"
+          alt="vision image"
+          className="w-full h-auto rounded-lg shadow-lg
+          custom-transform1"
+        />
+      </div>
+      <div className="flex flex-col items-center w-full md:w-[65%]">
+        <h1 className="hidden md:block uppercase text-center text-4xl font-extrabold tracking-wide ">
           Our Vision
         </h1>
-        <div
-          className="flex flex-col
-         md:flex-row items-center md:justify-between w-full mt-10"
-        >
-          <div className="w-full md:w-[65%]">
-            <p className="text-sm md:text-base leading-relaxed">
-              <span className="font-medium md:font-semibold mr-1">
-                At ZakTechies,
-              </span>
-              our vision is to be a global leader in crafting secure, innovative
-              digital solutions that redefine how businesses and individuals
-              interact with technology. We envision a future where privacy and
-              security are fundamental rights in the digital world, and where
-              advanced technology seamlessly integrates into everyday life,
-              driving growth, efficiency, and trust. Through continuous
-              innovation, we aim to build a more secure and connected world,
-              empowering our clients to reach new heights in a digital era
-              marked by constant evolution.
-            </p>
-          </div>
-          <div className="w-full md:w-[25%] pt-10 md:pt-0">
-            <img
-              src="/public/assets/-high-tech-virtual-reality-glasses.avif"
-              alt="mission image"
-              className="w-full h-auto rounded-lg shadow-lg
-               transition-transform duration-300 hover:scale-105
-                "
-            />
-          </div>
+        <div className="mt-10">
+          <p className="text-sm md:text-base leading-relaxed">
+            We envision ZakTechies as a global leader in digital technology
+            services. Our vision is to shape the future by delivering impactful,
+            reliable solutions that integrate seamlessly into everyday life. We
+            aspire to foster a secure, connected digital ecosystem where
+            businesses thrive. By staying at the forefront of technological
+            advancements, we aim to empower our clients and drive success. Our
+            commitment to innovation, quality, and security will guide us in
+            building a more inclusive and digitally enhanced world.
+          </p>
         </div>
+      </div>
+      <div className="hidden md:block w-full md:w-[35%] mb-10 md:mb-0">
+        <img
+          src="/public/assets/Vission-image.png"
+          alt="vision image"
+          className="w-full h-auto rounded-lg shadow-lg
+          custom-transform1"
+        />
       </div>
     </section>
   );

@@ -7,14 +7,14 @@ import { Link as ScrollLink } from "react-scroll";
 const Home = () => {
   return (
     <section
-      id="home"
+      id="updates"
       className="relative h-full 2xl:h-screen w-full flex flex-col"
     >
       <Header />
       <div className="absolute inset-0 -z-50">
         <img
           className="w-full h-full object-cover"
-          src="/public/assets/bg-2.jpg"
+          src="/public/assets/Home-background.jpg"
           alt="Home Background"
         />
       </div>
@@ -42,7 +42,7 @@ const Home = () => {
           </h1>
 
           <span className="mt-3">
-            <p className=" text-sm md:text-base leading-relaxed">
+            <p className=" text-base leading-relaxed">
               <span className="font-medium md:font-semibold mr-1">
                 At ZakTechies,
               </span>
@@ -75,7 +75,10 @@ const Home = () => {
                   bg-gray-50 group-hover:w-0"
                 ></span>
            */}
-                <span className="relative z-10 flex items-center justify-center gap-2 text-sm md:text-base">
+                <span
+                  className="relative z-10 flex items-center
+                 justify-center gap-2 text-base"
+                >
                   {`Don't hesitate to reach out.`}
                   <MdMarkEmailRead className="text-xl" />
                 </span>
