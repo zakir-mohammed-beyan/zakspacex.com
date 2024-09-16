@@ -1,16 +1,15 @@
 import Home from "./components/Home";
 import Mission from "./components/Mission";
 import Vision from "./components/Vision";
-import Services from "./components/Services";
+import Updates from "./components/Updates";
 
 const App = () => {
   return (
     <section>
       <Home />
-
       <Mission />
       <Vision />
-      <Services />
+      <Updates />
     </section>
   );
 };

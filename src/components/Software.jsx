@@ -1,7 +1,7 @@
-const Services = () => {
+const Software = () => {
   return (
     <section
-      id="services"
+      id="software"
       className="bg-blue-300 min-h-screen w-full pt-[20vh] flex px-6 md:px-28 xl:px-[10%]"
     >
       Our Services at Zakspacex Technologies Zakspacex offers a suite of
@@ -20,4 +20,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Software;

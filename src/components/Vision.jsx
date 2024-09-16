@@ -2,19 +2,44 @@ const Vision = () => {
   return (
     <section
       id="vision"
-      className="bg-amber-100 min-h-screen w-full pt-[20vh] flex px-6 md:px-28 xl:px-[10%]"
+      className="flex flex-col bg-slate-300 
+      h-fit w-full py-[10vh] px-[10%]"
     >
-      Our Vision at Zakspacex Technologies We envision a future where privacy,
-      technology, and promotion converge seamlessly to create a more secure and
-      empowered digital world. At Zakspacex, our vision is to be the pioneers of
-      a digital landscape where innovation serves humanity, enabling businesses
-      and individuals to thrive while safeguarding their privacy and data.
-      Through continuous advancement in privacy technologies, forward-thinking
-      software solutions, and revolutionary promotional strategies, we strive to
-      shape a world where technology acts as a force for good—empowering people,
-      protecting their digital rights, and unlocking new opportunities for
-      growth and success. Our vision is to lead this transformation, creating
-      lasting value and trust in every solution we build.
+      <div className="flex flex-col items-center">
+        <h1 className="uppercase text-center text-4xl font-extrabold tracking-wide text-gray-800">
+          Our Vision
+        </h1>
+        <div
+          className="flex flex-col
+         md:flex-row items-center md:justify-between w-full mt-10"
+        >
+          <div className="w-full md:w-[65%]">
+            <p className="text-sm md:text-base leading-relaxed">
+              <span className="font-medium md:font-semibold mr-1">
+                At ZakTechies,
+              </span>
+              our vision is to be a global leader in crafting secure, innovative
+              digital solutions that redefine how businesses and individuals
+              interact with technology. We envision a future where privacy and
+              security are fundamental rights in the digital world, and where
+              advanced technology seamlessly integrates into everyday life,
+              driving growth, efficiency, and trust. Through continuous
+              innovation, we aim to build a more secure and connected world,
+              empowering our clients to reach new heights in a digital era
+              marked by constant evolution.
+            </p>
+          </div>
+          <div className="w-full md:w-[25%] pt-10 md:pt-0">
+            <img
+              src="/public/assets/-high-tech-virtual-reality-glasses.avif"
+              alt="mission image"
+              className="w-full h-auto rounded-lg shadow-lg
+               transition-transform duration-300 hover:scale-105
+                "
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
