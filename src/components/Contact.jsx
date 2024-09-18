@@ -1,83 +1,66 @@
-import PropTypes from "prop-types";
-import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import FormField from "./FormField";
+import Footer from "./Footer";
 
 const Contact = () => {
-  // Reusable Social Media Button component
-  const SocialMediaButton = ({
-    Icon,
-    textColor = "text-blue-600",
-    hoverColor = "bg-blue-600",
-    borderColor = "border-blue-600",
-    ariaLabel,
-    url, // New prop for the URL
-  }) => {
-    return (
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={ariaLabel} // Accessibility improvement
-      >
-        <span
-          className={`flex relative group items-center 
-            justify-center bg-transparent overflow-hidden
-          border rounded-full shadow ${borderColor}
-          w-11 h-11 cursor-pointer hover:text-white ${textColor}`}
-        >
-          <Icon className="relative z-10 text-xl" />
-          <span
-            className={`${hoverColor} absolute h-full w-full left-0 top-0 transform scale-x-0 origin-center transition-transform duration-300 group-hover:scale-x-100`}
-          ></span>
-        </span>
-      </a>
-    );
-  };
-
-  // Define PropTypes for the component
-  SocialMediaButton.propTypes = {
-    Icon: PropTypes.elementType.isRequired,
-    textColor: PropTypes.string,
-    hoverColor: PropTypes.string,
-    borderColor: PropTypes.string,
-    ariaLabel: PropTypes.string.isRequired, // Add ariaLabel as required
-    url: PropTypes.string.isRequired, // URL is required now
-  };
-
-  // Define default props
-  SocialMediaButton.defaultProps = {
-    textColor: "text-blue-600",
-    hoverColor: "bg-blue-600",
-    borderColor: "border-blue-600",
-  };
-
   return (
-    <section id="contact">
-      <div className="flex gap-5 mt-6 showRightWhite">
-        <SocialMediaButton
-          Icon={FaFacebook}
-          ariaLabel="Facebook"
-          url="https://www.facebook.com/theshroudedsoul/" // Facebook URL
-        />
-        <SocialMediaButton
-          Icon={FaInstagram}
-          hoverColor="bg-pink-600"
-          borderColor="border-pink-600"
-          textColor="text-pink-600"
-          ariaLabel="Instagram"
-          url="https://www.instagram.com/zakspacex/?hl=en" // Instagram URL
-        />
-        <SocialMediaButton
-          Icon={FaLinkedinIn}
-          ariaLabel="LinkedIn"
-          url="https://www.linkedin.com/in/yourprofile/" // LinkedIn URL
-        />
-        <SocialMediaButton
-          Icon={FaXTwitter}
-          ariaLabel="X (formerly Twitter)"
-          url="https://www.twitter.com/yourprofile/" // X (Twitter) URL
-        />
+    <section
+      id="contact"
+      className="flex flex-col w-full h-fit bg-transparent items-center justify-center"
+    >
+      <div className="flex justify-center items-center w-full">
+        <div className="flex flex-col w-full max-w-3xl pt-5 pb-10 px-10 my-12 rounded-lg shadow-lg">
+          <form action="#">
+            <fieldset
+              className="border border-gray-300 
+            rounded-md px-10 space-y-8 "
+            >
+              <legend className="text-xl font-bold text-gray-800 px-5 text-center">
+                Get in touch with us
+              </legend>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField
+                  id="name"
+                  label="Full Name"
+                  placeholder="Enter your name"
+                />
+                <FormField
+                  id="phone"
+                  label="Phone"
+                  placeholder="Enter your phone number"
+                />
+                <FormField
+                  id="email"
+                  label="Email Address"
+                  type="email"
+                  placeholder="Enter your email address"
+                />
+                <FormField
+                  id="subject"
+                  label="Email Subject"
+                  placeholder="Enter the subject"
+                />
+              </div>
+              <FormField
+                id="message"
+                label="Message"
+                placeholder="Write your message here"
+                isTextArea={true}
+              />
+              <div className="flex justify-center pb-8">
+                <button
+                  type="submit"
+                  className="w-fit  px-6 py-4 bg-indigo-400
+                   text-white font-semibold rounded-md
+                   hover:bg-indigo-600 transition duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
+      <Footer />
     </section>
   );
 };
