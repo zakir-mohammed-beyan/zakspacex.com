@@ -14,7 +14,7 @@ const Contact = () => {
               className="border border-gray-300 
             rounded-md px-10 space-y-8 "
             >
-              <legend className="text-xl font-bold text-gray-800 px-5 text-center">
+              <legend className="text-xl font-bold px-5 text-center">
                 Get in touch with us
               </legend>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

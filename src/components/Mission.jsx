@@ -9,7 +9,7 @@ const Mission = () => {
       <h1
         className="md:hidden uppercase
        text-center text-4xl font-extrabold
-       tracking-wide text-gray-800"
+       tracking-wide "
       >
         Our Mission
       </h1>
@@ -27,7 +27,7 @@ const Mission = () => {
         <h1
           className=" hidden md:block uppercase 
         text-center text-4xl font-extrabold
-        tracking-wide text-gray-800"
+        tracking-wide"
         >
           Our Mission
         </h1>

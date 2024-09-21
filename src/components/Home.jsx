@@ -12,7 +12,7 @@ const Home = () => {
     >
       <Header />
 
-      <div className="absolute top-1/4 right-5 z-10">
+      <div className=" hidden md:block absolute top-1/4 right-5 z-10">
         <img
           className="w-full h-full opacity-100"
           src="/public/assets/Stay-up-to-date.svg"
@@ -20,7 +20,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="pb-[22.5vh] pt-[20vh] md:pt-[22vh] flex px-[10%] h-full w-full z-10">
+      <div className="pb-[22.5vh] pt-[20vh] md:pt-[24vh] flex px-[10%] h-full w-full z-10">
         <div className="flex flex-col w-full h-full lg:w-[90%] 2xl:w-[72%]">
           <h1
             className="font-extrabold leading-5 md:leading-10

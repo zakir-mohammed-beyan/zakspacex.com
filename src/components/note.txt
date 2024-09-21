@@ -83,3 +83,10 @@ const Contact = () => {
 };
 
 export default Contact;
+
+ <img
+            className="w-full h-full opacity-100"
+            src="/public/assets/Stay-up-to-date.svg"
+            alt="Home Background Image"
+          />
+          

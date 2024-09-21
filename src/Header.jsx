@@ -15,9 +15,11 @@ const Header = () => {
     const isMobile = window.innerWidth < 768;
 
     if (isMobile) {
-      setNavbarBg(scrollY > 100 ? "bg-lime-400 shadow-md" : "bg-amber-400");
+      setNavbarBg(scrollY > 100 ? "bg-yellow-300 shadow-md" : "bg-amber-400");
     } else {
-      setNavbarBg(scrollY > 100 ? "bg-lime-400 shadow-md" : "bg-transparent");
+      setNavbarBg(
+        scrollY > 100 ? " bg-yellow-300 shadow-md" : "bg-transparent"
+      );
     }
   };
 
@@ -37,16 +39,22 @@ const Header = () => {
 
   return (
     <header
-      className={`${navbarBg} transition-colors duration-300 fixed w-full top-0 left-0 z-50`}
+      className={`${navbarBg} transition-colors duration-300 fixed w-full top-0 left-0 z-50 `}
     >
-      <nav className="h-[10vh] flex items-center justify-between px-[10%]">
+      <nav className="h-[12vh] flex items-center justify-between px-[10%]">
         <ScrollLink
           to="updates"
           smooth={true}
           duration={500}
           className="cursor-pointer"
         >
-          <h1 className="text-lg font-extrabold cursor-pointer">ZakTechies</h1>
+          <div>
+            <img
+              className=" w-1/2"
+              src="/public//assets/DXC Logo Horiz_Purple+Black RGB.png"
+              alt=""
+            />
+          </div>
         </ScrollLink>
 
         {/* Desktop Menu */}
@@ -86,7 +94,9 @@ const Header = () => {
 const MenuItem = ({ name, to }) => (
   <li className="relative group">
     <ScrollLink
-      className="uppercase font-medium transition-colors duration-300 hover:text-gray-400 text-gray-800 cursor-pointer md:text-[14px] xl:text-base tracking-wide"
+      className="uppercase font-medium transition-colors duration-300
+       hover:text-gray-400 cursor-pointer 
+       tracking-wide"
       to={to}
       spy={true}
       smooth={true}

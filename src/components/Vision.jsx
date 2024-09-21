@@ -2,7 +2,7 @@ const Vision = () => {
   return (
     <section
       id="vision"
-      className="flex flex-col md:flex-row bg-sky-950
+      className="flex flex-col md:flex-row bg-gray-900
       h-fit w-full py-[10vh] px-[10%] md:gap-x-20 text-white"
     >
       <h1

@@ -9,7 +9,7 @@ const Footer = () => {
      text-white "
     >
       <p className=" font-medium">
-        Copyright © 2024 by Zakir Mohammed | All Rights Reserved.
+        Copyright © 2030 by Zakir Mohammed | All Rights Reserved.
       </p>
       <ScrollLink
         to="updates"
